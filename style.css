@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+:root {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: var(--dark-blue);
+  font-family: "Manrope", sans-serif;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/*
+===================
+container
+=================== 
+*/
+.container {
+  padding: 2rem;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 10px;
+  max-width: 450px;
+  position: relative;
+}
+
+/*
+===================
+adviceNumber
+=================== 
+*/
+
+#adviceNumber {
+  font-size: 12px;
+  color: var(--neon-green);
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/*
+===================
+adviceContents
+=================== 
+*/
+
+#adviceContents {
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.75rem;
+  color: var(--light-cyan);
+}
+
+#adviceContents::before {
+  content: " \275D  ";
+}
+
+#adviceContents::after {
+  content: " \275E ";
+}
+
+/*
+===================
+image-div
+=================== 
+*/
+.image-div {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.image-div img {
+  width: 100%;
+}
+
+/*
+===================
+changeAdvice
+button 
+=================== 
+*/
+#changeAdvice {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background-image: url(./images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--neon-green);
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+}
+
+#changeAdvice:hover {
+  box-shadow: 0px 0px 15px var(--neon-green);
+}
